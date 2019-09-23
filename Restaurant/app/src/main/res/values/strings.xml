@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Restaurant</string>
+
+    <string name="title_name">이디야 커피</string>
+    <string name="sub_name">메뉴 목록</string>
+    <string name="location">서울 강남구 논현로 636 이디야빌딩</string>
+    <string name="telephone">02-543-6467</string>
+    <string name="operation_time">운영시간 : 07시30분~02시00분</string>
+    <string name="quick1">Quick1</string>
+
+</resources>

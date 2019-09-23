@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hansung.android.restaurant">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".StartAnimation"
+            android:label="애니메이션">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Map"
+            android:label="맛집 지도">
+        </activity>
+
+
+        <activity android:name=".RestaurantRegister"
+            android:label="맛집 등록">
+        </activity>
+
+
+        <activity android:name=".hw1_foodmenu"
+            android:label="커피 메뉴"
+            android:parentActivityName=".hw1_foodmenu" >
+        </activity>
+
+
+        <activity android:name=".Restaurant"
+            android:label="맛집">
+        </activity>
+
+        <activity
+            android:name=".MenuAdd"
+            android:label="상세 메뉴 등록" />
+
+        <activity android:name=".MenuDetail"
+            android:label="상세 메뉴 정보"
+            android:parentActivityName=".Restaurant" >
+        </activity>
+
+        <!--===============FileProvider를 설정해줌으로써 특정한 앱에서 생성한 파일을 다른 앱과 공유할 수 있도록 하는 방법=============-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.hansung.android.restaurant"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!--===============지도 해당 자신의 구글 지도 키==================-->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAQK90OxHxI9FHu5ZEjYGdTu6T3Fpc5Rog" />
+
+
+
+    </application>
+</manifest>
